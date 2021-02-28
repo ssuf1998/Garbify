@@ -1,0 +1,34 @@
+{
+  "name": "gabifyserver",
+  "version": "0.1.0",
+  "description": "Server for Garbify.",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "babel src/*.js --out-dir dist",
+    "dev": "set DEBUG=gabifyserver & set NODE_ENV=development & nodemon --exec babel-node src/index.js",
+    "dev.run": "set NODE_ENV=development & node dist/index.js",
+    "run": "node dist/index.js",
+    "test": "babel-node test.js"
+  },
+  "author": "ssuf1998",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^20.1.0",
+    "axios": "^0.21.1",
+    "core-js": "3.9.0",
+    "regenerator-runtime": "0.13.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/eslint-parser": "^7.13.8",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "eslint": "^7.20.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "nodemon": "^2.0.7"
+  }
+}
