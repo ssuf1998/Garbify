@@ -2,7 +2,8 @@
   "name": "gabifyserver",
   "version": "0.1.0",
   "description": "Server for Garbify.",
-  "main": "src/index.js",
+  "private": true,
+  "main": "./src/index.js",
   "scripts": {
     "build": "babel src/*.js --out-dir dist",
     "dev": "set DEBUG=gabifyserver & set NODE_ENV=development & nodemon --exec babel-node src/index.js",
