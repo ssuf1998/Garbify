@@ -5,7 +5,7 @@
   "private": true,
   "main": "./src/index.js",
   "scripts": {
-    "build": "babel src/*.js --out-dir dist",
+    "build": "babel src --out-dir dist",
     "dev": "set DEBUG=gabifyserver & set NODE_ENV=development & nodemon --exec babel-node src/index.js",
     "dev.run": "set NODE_ENV=development & node dist/index.js",
     "run": "node dist/index.js",
@@ -17,7 +17,9 @@
     "@hapi/hapi": "^20.1.0",
     "axios": "^0.21.1",
     "core-js": "3.9.0",
-    "regenerator-runtime": "0.13.5"
+    "redis": "^3.0.2",
+    "regenerator-runtime": "0.13.5",
+    "svg-captcha": "^1.4.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.10",
