@@ -1,0 +1,20 @@
+<view class="captcha-input">
+  <view class="input-wrap"
+        bind:tap="focusInput"
+  >
+    <view
+        class="input-box {{((captcha.length===index+1||(captcha.length===0&&index===0))&&focus)?'focused':''}} {{err?'err':''}}"
+        wx:key="*this"
+        wx:for="{{4}}">
+      {{captcha[index]}}
+    </view>
+  </view>
+
+  <input model:value="{{captcha}}"
+         focus="{{focus}}"
+         bind:blur="inputBlurred"
+         maxlength="{{4}}"
+         bind:input="inputChange"
+         class="real-input"/>
+
+</view>

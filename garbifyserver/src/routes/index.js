@@ -1,7 +1,8 @@
 import classify from './classify';
-import captcha from './captcha';
+import { captcha, needCaptcha } from './captcha';
 
 export default [].concat(
   classify,
-  captcha
+  captcha,
+  needCaptcha
 );

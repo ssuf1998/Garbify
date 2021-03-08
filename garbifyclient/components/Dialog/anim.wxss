@@ -1,0 +1,90 @@
+.dialog .dialog-box.entering {
+    animation: dialog-enter-anim 0.3s;
+}
+
+.dialog .dialog-box.leaving {
+    animation: dialog-leave-anim 0.3s;
+}
+
+.dialog .dialog-box.focus {
+    animation: dialog-focus-anim 0.2s;
+}
+
+.dialog .dialog-box.hidden {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+@keyframes dialog-enter-anim {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes dialog-leave-anim {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+@keyframes dialog-focus-anim {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.dialog .mask.entering {
+    animation: mask-enter-anim 0.8s;
+}
+
+.dialog .mask.leaving {
+    animation: mask-leave-anim 0.8s;
+}
+
+.dialog .mask.hidden {
+    display: none;
+    opacity: 0;
+}
+
+@keyframes mask-enter-anim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes mask-leave-anim {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "garbify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ssuf1998",
+  "license": "ISC",
+  "dependencies": {
+    "js-base64": "^3.6.0"
+  }
+}

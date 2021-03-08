@@ -1,0 +1,31 @@
+.toast.info{
+    background: #3d5afe;
+}
+
+.toast.info .msg {
+    color: white;
+}
+
+.toast.success{
+    background: #00E676;
+}
+
+.toast.success .msg {
+    color: white;
+}
+
+.toast.warning{
+    background: #FFD740;
+}
+
+.toast.warning .msg {
+    color: black;
+}
+
+.toast.fail{
+    background: #ef5350;
+}
+
+.toast.fail .msg {
+    color: white;
+}

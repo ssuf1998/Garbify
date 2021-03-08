@@ -1,0 +1,7 @@
+var numFixed = function (value, n) {
+  return value.toFixed(n);
+};
+
+module.exports = {
+  numFixed: numFixed
+};

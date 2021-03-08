@@ -1,0 +1,8 @@
+<view class="dialog"
+      hidden="{{!_show}}"
+>
+  <view class="mask {{maskAnimStatus}}" bind:tap="_closeDialog"/>
+  <view class="dialog-box {{dialogAnimStatus}}">
+    <slot></slot>
+  </view>
+</view>

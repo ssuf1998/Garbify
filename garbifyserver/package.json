@@ -19,7 +19,8 @@
     "core-js": "3.9.0",
     "redis": "^3.0.2",
     "regenerator-runtime": "0.13.5",
-    "svg-captcha": "^1.4.0"
+    "svg-captcha": "^1.4.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.10",

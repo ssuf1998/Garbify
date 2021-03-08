@@ -1,0 +1,80 @@
+#result-page {
+    padding: 32rpx 0 64rpx 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.showcase {
+    background-size: cover;
+    background-position: center;
+    width: 480rpx;
+    height: 480rpx;
+    margin: 96rpx 32rpx 48rpx 96rpx;
+
+    box-shadow: -64rpx -64rpx 0 #3d5afe;
+    transition: box-shadow 0.3s;
+}
+
+.showcase.anim {
+    box-shadow: 0 0 0 #3d5afe;
+}
+
+.showcase:after {
+    content: '';
+    position: absolute;
+    transform: translateY(-100%);
+    width: 480rpx;
+    height: 480rpx;
+    background: #3d5afe;
+    opacity: 0.35;
+}
+
+.class-label {
+    background-size: contain;
+    background-position: right center;
+    background-repeat: no-repeat;
+    height: 128rpx;
+    width: 384rpx;
+    filter: invert(28%) sepia(35%) saturate(7454%) hue-rotate(230deg) brightness(105%) contrast(99%);
+}
+
+.detail {
+    padding: 0 96rpx;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.poss-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.poss-list .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18rpx 128rpx;
+}
+
+.poss-list .item .prog {
+    flex-grow: 1;
+    height: 28rpx;
+    margin: 0 48rpx;
+    border-radius: 19rpx;
+}
+
+.poss-list .item .label {
+    font-size: x-small;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: right;
+    width: 150rpx;
+}

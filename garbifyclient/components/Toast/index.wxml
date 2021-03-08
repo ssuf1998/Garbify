@@ -1,0 +1,3 @@
+<view class="toast {{type}} {{show?'':'hidden'}}">
+    <text class="msg">{{msg}}</text>
+</view>

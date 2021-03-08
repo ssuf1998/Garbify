@@ -1,7 +1,7 @@
 import * as garbage from '../const/garbage';
 import axios from 'axios';
 import store from '../store';
-import {promisify} from 'util';
+import { promisify } from 'util';
 
 /**
  *
@@ -27,40 +27,15 @@ const predictFormat = (predict) => {
   return result;
 };
 
-const ipLimit = async (ip) => {
-  const key = `${ip}-limit`;
-  // const keyExists = store.redisClient.exists(key);
-  const keyExists = await promisify(store.redisClient.exists)
-    .bind(store.redisClient)(key);
-
-  if (!keyExists) {
-    // 5分钟15次
-    // 否则需要验证码
-    store.redisClient.set(key, 1); // max 15
-    store.redisClient.expire(key, 300);
-    return true;
-  } else {
-    const curLimitVal = parseInt(await promisify(store.redisClient.get)
-      .bind(store.redisClient)(key)) + 1;
-    if (curLimitVal <= 15) {
-      store.redisClient.set(key, curLimitVal);
-      return true;
-    } else {
-      return false;
-    }
-  }
-};
-
 const classify = {
   method: 'POST',
   path: '/classify',
   handler: async (req, h) => {
     const ip = req.headers['x-forwarded-for'] || req.info.remoteAddress;
-    // 验证码为POST，没法重定向，需要前端配合
-    if (!await ipLimit(ip)) return h.response().code(403);
+    if (!await store.ipLimit(ip)) return h.response().code(403);
 
     const validImgStr = req.payload.img
-      .replace(/[/+]/, $0 => {
+      .replace(/[/+]/g, $0 => {
         if ($0 === '/') return '_';
         if ($0 === '+') return '-';
       });

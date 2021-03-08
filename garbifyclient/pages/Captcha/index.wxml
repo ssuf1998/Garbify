@@ -1,0 +1,13 @@
+<view class="container" id="captcha-page">
+  <text class="captcha-tip">输入验证码后继续</text>
+
+  <image class="captcha {{captchaLoading?'loading':''}}"
+         bind:tap="getCaptchaSvg"
+         style="background-image:url('{{svg}}')">
+  </image>
+
+  <captcha-input bind:submit="verifyCaptcha"
+                 model:err="{{err}}"
+  />
+
+</view>

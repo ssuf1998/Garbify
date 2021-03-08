@@ -1,0 +1,99 @@
+@import "anim.wxss";
+
+
+.dialog {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dialog .mask {
+    backdrop-filter: blur(18rpx);
+    background: #00000010;
+    width: 100%;
+    height: 100%;
+}
+
+.dialog .dialog-box {
+    overflow: hidden;
+    padding: 36rpx;
+    box-sizing: border-box;
+    position: absolute;
+    background: white;
+    width: 70%;
+    min-height: 30%;
+    border-radius: 24rpx;
+    box-shadow: 0 16rpx 32rpx #00000020;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dialog .dialog-box .title {
+    font-weight: bold;
+    font-size: 42rpx;
+}
+
+.dialog .dialog-box .msg {
+    width: 85%;
+    word-wrap: break-word;
+    max-height: 512rpx;
+    overflow: hidden auto;
+    margin-bottom: 36rpx;
+}
+
+.dialog .dialog-box .content .msg {
+    width: 100% !important;
+}
+
+.dialog .dialog-box .content {
+    width: 85%;
+    margin: 36rpx 0;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dialog .dialog-box .btn-area {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.dialog .dialog-box .btn-area .btn {
+    margin: 0 24rpx;
+    min-width: 128rpx;
+    width: inherit;
+    max-height: 64rpx;
+    font-size: 32rpx;
+    font-weight: normal;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog .dialog-box .btn-area .btn.positive {
+    color: white;
+    background: #3d5afe;
+}
+
+.dialog .dialog-box .btn-area .btn.positive:active {
+    background: #2741d0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.dialog .dialog-box .btn-area .btn.negative:active {
+    color: black;
+}

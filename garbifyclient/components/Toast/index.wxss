@@ -1,0 +1,26 @@
+@import "colors.wxss";
+
+.toast {
+    position: absolute;
+    height: 84rpx;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    transition: height 0.3s;
+}
+
+.toast.hidden {
+    height: 0;
+    display: none;
+}
+
+.msg {
+    font-weight: bold;
+}
+

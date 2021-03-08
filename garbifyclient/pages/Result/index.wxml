@@ -1,0 +1,29 @@
+<wxs module="me" src="index.wxs"></wxs>
+<view class="container" id="result-page">
+  <image style="background-image:url('{{img}}')"
+         class="showcase {{anim?'anim':''}}"/>
+
+  <view class="detail">
+    <text>
+      {{result[0].name}}
+    </text>
+    <image src="../../static/{{typeNameMap[result[0].type]}}.svg"
+           mode="aspectFit"
+           class="class-label"
+           wx:if="{{result[0]}}"
+    />
+  </view>
+
+  <view class="poss-list">
+    <view wx:for="{{result}}"
+          wx:key="index"
+        class="item">
+      <text class="label">{{item.name}}</text>
+      <view class="prog"
+            style="background:linear-gradient(to right,#3d5afe {{me.numFixed(item.confidence,2)*100}}%,#3d5afe30 {{me.numFixed(item.confidence,2)*100}}%)"
+      />
+    </view>
+
+  </view>
+
+</view>

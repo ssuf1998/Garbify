@@ -1,0 +1,39 @@
+#home-page {
+    padding: 128rpx 0 256rpx 0;
+}
+
+.wrap {
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 164rpx;
+    filter: invert(28%) sepia(35%) saturate(7454%) hue-rotate(230deg) brightness(105%) contrast(99%);
+}
+
+.logo-wrap {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-wrap text {
+    text-align: center;
+    letter-spacing: 6rpx;
+    opacity: 0.5;
+}
+
+.loading-spirit {
+    height: 96rpx;
+    width: 100%;
+}
+
+.msg {
+    font-size: small;
+}

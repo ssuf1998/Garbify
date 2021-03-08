@@ -1,0 +1,41 @@
+<view class="container" id="home-page">
+  <view class="wrap">
+    <view class="logo-wrap">
+      <image class="logo"
+             src="../../static/logo.svg"
+             mode="aspectFit"
+      >
+      </image>
+      <text>垃圾分类小助手</text>
+    </view>
+    <button class="btn primary"
+            id="classify-btn"
+            bind:tap="pickBtnClick">
+      <image src="../../static/icons/camera.svg"
+             class="icon"/>
+      拍照分类
+    </button>
+
+  </view>
+
+  <dialog model:show="{{uploadingShow}}"
+          bind:popup="uploadingPopping"
+          modal
+  >
+    <text class="title">{{uploadingMsg}}</text>
+    <view class="content">
+      <image
+          class="loading-spirit"
+          mode="aspectFit"
+          src="../../static/loading/{{uploadingRandGif}}.gif"/>
+    </view>
+
+<!--    <view class="btn-area">-->
+<!--      <button class="btn negative"-->
+<!--              bind:tap="closeUploading">-->
+<!--        取消-->
+<!--      </button>-->
+<!--    </view>-->
+  </dialog>
+
+</view>

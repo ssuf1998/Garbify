@@ -1,0 +1,23 @@
+#captcha-page {
+    padding: 96rpx 0 256rpx 0;
+}
+
+.captcha-tip {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.captcha {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 150rpx;
+    width: 55%;
+    margin: 96rpx 0;
+    background-color: white;
+    opacity: 1;
+    transition: opacity 0.15s;
+}
+
+.captcha.loading {
+    opacity: 0;
+}
